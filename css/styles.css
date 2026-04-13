@@ -1,0 +1,291 @@
+:root {
+  --color-bg: hsl(0, 0%, 95%);
+  --color-accent: hsl(0, 0%, 20%);
+  --color-accent2: hsl(123, 46%, 90%);
+  --color-accent3: #2e7d32;
+  /* --color-accent2: hsl(0, 0%, 40%); */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: var(--color-bg);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+
+  -webkit-tap-highlight-color: transparent;
+  overflow: auto;
+}
+
+
+.page {
+  flex: 1;
+}
+
+
+.topnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  background-color: var(--color-accent);
+  opacity: 100%;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.left-topnav {
+  width: 100%;
+}
+
+.right-topnav {
+  justify-self: center;
+  padding-right: 60px;
+  
+}
+
+.page {
+  display: grid;
+  flex-direction: column;
+
+  z-index: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  padding-top: 60px; /* same as nav height */
+
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+
+.hero-head {
+  font-size: 3rem;
+  padding-bottom: 15px;
+}
+.hero-sub {
+  font-size: 1rem;
+}
+
+
+.products {
+  padding: 50px 50px;
+  text-align: left;
+  padding: 0 15px;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 15px;
+  align-items: center;
+}
+
+.product-card img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card h3 {
+  margin: 15px 0 5px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.tag {
+  width: fit-content;
+  font-size: 0.75rem;
+  background: var(--color-accent2);
+  /* background: ; */
+  color: hsl(0, 0%, 5%);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.product-card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: var(--color-accent3);
+  /* background: #2e7d32; */
+
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+.about {
+  padding: 120px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.footer {
+  background: var(--color-accent);
+  color: #ccc;
+  padding: 10px 10px 10px;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  align-items: center;
+
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  /* gap: 40px; */
+  flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.right-topnav .social-icons a {
+  width: 30px;
+  height: 30px;
+}
+
+.right-topnav .social-icons svg {
+  width: 16px;
+  height: 16px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,0.7);
+}
+
+.social-icons a:hover {
+  background: #2e7d32;
+}
+
+.social-icons a:hover svg {
+  fill: white;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.links a:hover {
+  color: white;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #777;
+}
