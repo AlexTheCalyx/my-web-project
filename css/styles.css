@@ -106,11 +106,17 @@ html, body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-auto-rows: 300px;
-  gap: 80px;
-  max-width: 1000px;
+  gap: 40px;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .product-card {
@@ -289,3 +295,11 @@ html, body {
   font-size: 0.8rem;
   color: #777;
 }
+
+/* 
+@media (max-width: 500px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+} */
