@@ -1,0 +1,6 @@
+.Xauthority
+.bash_history
+.cache/
+.npm/
+.local/
+*.log
